@@ -17,14 +17,16 @@ const debug = Debug("negotiate-events");
  *  `acceptEvent` property to the request object.
  */
 function eventsNegotiationMiddleware(req, res, next) {
-  function send({
-    body, // can also be a stream
-    headers,
-    modifiers,
-    config: configs,
-  }) {
+  function send(args) {
+    const baseArgs = {};
+    for (const prop in args) {
+      if (prop !== "config" && prop !== "modifiers") {
+        baseArgs[prop] = args[prop];
+      }
+    }
+
     let failStatus;
-    for (const [protocol, config] of Object.entries(configs)) {
+    for (const [protocol, config] of Object.entries(args.config)) {
       const status = res.events?.[protocol].configure({ config });
 
       if (status) {
@@ -47,10 +49,11 @@ function eventsNegotiationMiddleware(req, res, next) {
       // Only run for configured protocols where middlewares are available
       if (res.events?.[protocol]?.config) {
         const eventsStatus = res.events[protocol].send({
-          body,
-          headers,
+          ...baseArgs,
           params,
-          modifiers: modifiers?.[protocol],
+          ...(args?.modifiers?.[protocol] && {
+            modifiers: args.modifiers[protocol],
+          }),
         });
 
         // if notifications are sent, you can quit
