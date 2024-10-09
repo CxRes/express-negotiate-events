@@ -1,6 +1,6 @@
 {
   "name": "express-negotiate-events",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Connect/Express style middleware for negotiating notification protocols",
   "keywords": [
     "accept-events",
@@ -28,6 +28,7 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/compat": "^1.1.0",
     "@eslint/js": "^9.6.0",
+    "@vitest/coverage-v8": "^2.0.3",
     "cspell": "^8.10.4",
     "dedent": "^1.5.3",
     "eslint": "^9.6.0",
@@ -38,7 +39,8 @@
     "knip": "^5.24.4",
     "lint-staged": "^15.2.7",
     "parse-gitignore": "^2.0.0",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.2",
+    "vitest": "^2.0.3"
   },
   "scripts": {
     "format": "prettier * --check",
@@ -50,7 +52,9 @@
     "lint:knip": "knip",
     "lint:packages": "pnpm dedupe --check --silent",
     "lint:spelling": "cspell --dot --quiet \"**\"",
-    "prepare": "node .husky/install.js",
-    "prepublishOnly": "pnpm run lint"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
   }
 }
