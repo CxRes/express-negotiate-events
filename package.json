@@ -52,6 +52,8 @@
     "lint:knip": "knip",
     "lint:packages": "pnpm dedupe --check --silent",
     "lint:spelling": "cspell --dot --quiet \"**\"",
+    "prepare": "node .husky/install.js",
+    "prepublishOnly": "pnpm run lint",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
