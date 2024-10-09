@@ -1,6 +1,6 @@
 {
   "name": "express-negotiate-events",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A Connect/Express style middleware for negotiating notification protocols",
   "keywords": [
     "accept-events",
@@ -21,7 +21,7 @@
   "exports": "./src/index.js",
   "dependencies": {
     "debug": "^4.3.5",
-    "structured-headers": "npm:@cxres/structured-headers@2.0.0-alpha.1-nesting.0"
+    "structured-headers": "npm:@cxres/structured-headers@2.0.0-nesting.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

@@ -10,10 +10,10 @@ importers:
     dependencies:
       debug:
         specifier: ^4.3.5
-        version: 4.3.5
+        version: 4.3.7
       structured-headers:
-        specifier: npm:@cxres/structured-headers@2.0.0-alpha.1-nesting.0
-        version: '@cxres/structured-headers@2.0.0-alpha.1-nesting.0'
+        specifier: npm:@cxres/structured-headers@2.0.0-nesting.0
+        version: '@cxres/structured-headers@2.0.0-nesting.0'
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
@@ -378,8 +378,8 @@ packages:
     resolution: {integrity: sha512-htHhNF8WrM/NfaLSWuTYw0NqVgFRVHYSyHlRT3i/Yv5xvErld8Gw7C6ldm+0TLjoGlUe6X1VV72JSir7+yLp/Q==}
     engines: {node: '>=18.0'}
 
-  '@cxres/structured-headers@2.0.0-alpha.1-nesting.0':
-    resolution: {integrity: sha512-MYHRF2oS3Zvumh3swXs//GDGNe6L+sYnwplitC8Ns8CFQro+WKCidDrgk+suLq2Wm6e0ohIvEWqB8VM1mqbR8g==}
+  '@cxres/structured-headers@2.0.0-nesting.0':
+    resolution: {integrity: sha512-zW8AF/CXaxGe0B1KCj/QEY88Hqxh6xZ9i98UHqCFZZa/QgYGYJD9Z40/h+UZsrYi/ZW/VQVQhObB5Zegd/MDZQ==}
     engines: {node: '>=18', npm: '>=6'}
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -1051,15 +1051,6 @@ packages:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
 
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
   debug@4.3.7:
     resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
     engines: {node: '>=6.0'}
@@ -1639,9 +1630,6 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
-
-  ms@2.1.2:
-    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -2541,7 +2529,7 @@ snapshots:
 
   '@cspell/url@8.14.4': {}
 
-  '@cxres/structured-headers@2.0.0-alpha.1-nesting.0': {}
+  '@cxres/structured-headers@2.0.0-nesting.0': {}
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -2626,7 +2614,7 @@ snapshots:
   '@eslint/config-array@0.18.0':
     dependencies:
       '@eslint/object-schema': 2.1.4
-      debug: 4.3.5
+      debug: 4.3.7
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -2636,7 +2624,7 @@ snapshots:
   '@eslint/eslintrc@3.1.0':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.5
+      debug: 4.3.7
       espree: 10.2.0
       globals: 14.0.0
       ignore: 5.3.2
@@ -3182,10 +3170,6 @@ snapshots:
 
   dargs@8.1.0: {}
 
-  debug@4.3.5:
-    dependencies:
-      ms: 2.1.2
-
   debug@4.3.7:
     dependencies:
       ms: 2.1.3
@@ -3298,7 +3282,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.3
-      debug: 4.3.5
+      debug: 4.3.7
       escape-string-regexp: 4.0.0
       eslint-scope: 8.1.0
       eslint-visitor-keys: 4.1.0
@@ -3581,7 +3565,7 @@ snapshots:
   istanbul-lib-source-maps@5.0.6:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
-      debug: 4.3.5
+      debug: 4.3.7
       istanbul-lib-coverage: 3.2.2
     transitivePeerDependencies:
       - supports-color
@@ -3763,8 +3747,6 @@ snapshots:
   minimist@1.2.8: {}
 
   minipass@7.1.2: {}
-
-  ms@2.1.2: {}
 
   ms@2.1.3: {}
 
